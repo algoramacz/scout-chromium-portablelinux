@@ -147,6 +147,13 @@ setup_toolchain() {
     export CXXFLAGS+=" -resource-dir=${resource_dir} -B${LLVM_BIN}"
     export CPPFLAGS+=" -resource-dir=${resource_dir} -B${LLVM_BIN}"
     export CFLAGS+=" -resource-dir=${resource_dir} -B${LLVM_BIN}"
+
+    # --- DeepScout AMD Zen tuning for our AWS fleet ---
+    # -mtune to znver2/znver3 for future target Zen2/Zen3+
+    if [ "${_build_arch}" = "x64" ]; then
+       export CFLAGS+=" -march=x86-64-v2"
+       export CXXFLAGS+=" -march=x86-64-v2"
+    fi
 }
 
 gn_gen() {

@@ -9,9 +9,9 @@ Changed to our build
 
 ```
 git -C ungoogled-chromium fetch origin
-git -C ungoogled-chromium checkout scout-141.0.7390.122-1
+git -C ungoogled-chromium checkout scout-142.0.7444.162-1
 git add .gitmodules ungoogled-chromium
-git commit -m "Use scout-141.0.7390.122-1 submodule"
+git commit -m "Use scout-142.0.7444.162-1 submodule"
 git push
 ```
 
