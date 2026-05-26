@@ -6,10 +6,9 @@ Portable Linux (`.AppImage`) packaging for [ungoogled-chromium](https://github.c
 
 Changed to our build
 `git submodule set-url ungoogled-chromium https://github.com/algoramacz/scout-chromium.git`
-`git -C ungoogled-chromium fetch origin`
 
-Use latest submodule
 ```
+git -C ungoogled-chromium fetch origin
 git -C ungoogled-chromium checkout origin/main
 git add .gitmodules ungoogled-chromium
 git commit -m "Use latest scout-chromium submodule"
