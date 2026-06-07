@@ -1,0 +1,18 @@
+[
+  {"_comment": "In-box Win11 fonts, present on the overwhelming majority of machines but occasionally pruned on trimmed/enterprise images -> rarely absent.", "name": "Candara", "present_per_mille": 940},
+  {"name": "Corbel", "present_per_mille": 940},
+  {"name": "Constantia", "present_per_mille": 930},
+  {"name": "Sitka", "present_per_mille": 930},
+  {"name": "Calibri Light", "present_per_mille": 960},
+  {"name": "Candara Light", "present_per_mille": 900},
+  {"name": "Corbel Light", "present_per_mille": 900},
+  {"_comment": "Supplemental / regional optional-feature families -> genuinely vary.", "name": "Microsoft Himalaya", "present_per_mille": 520},
+  {"name": "Microsoft Yi Baiti", "present_per_mille": 520},
+  {"name": "Microsoft New Tai Lue", "present_per_mille": 520},
+  {"name": "Microsoft PhagsPa", "present_per_mille": 520},
+  {"name": "Microsoft Tai Le", "present_per_mille": 520},
+  {"name": "Mongolian Baiti", "present_per_mille": 560},
+  {"name": "MV Boli", "present_per_mille": 600},
+  {"name": "Ebrima", "present_per_mille": 700},
+  {"name": "Sans Serif Collection", "present_per_mille": 650}
+]

@@ -1,0 +1,7 @@
+[
+  {"version": "19.0.0", "weight": 50, "_comment": "Win11 24H2"},
+  {"version": "15.0.0", "weight": 12, "_comment": "Win11 23H2"},
+  {"version": "14.0.0", "weight": 10, "_comment": "Win11 22H2"},
+  {"version": "13.0.0", "weight": 8, "_comment": "Win11 21H2"},
+  {"version": "10.0.0", "weight": 20, "_comment": "Win10"}
+]
