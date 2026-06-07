@@ -80,6 +80,19 @@ apply_domsub() {
     fi
 }
 
+# Regenerate the fingerprint combination-table .inc files from their editable
+# JSON sources (patch 033). Runs on EVERY build (not stamped) so editing a table
+# -- e.g. adding a new Chrome version to chrome_versions.json -- takes effect on
+# the next build without re-patching; generate.py is write-if-changed so tables
+# left untouched don't force a recompile.
+generate_fingerprint_tables() {
+    local _gen="${_src_dir}/components/ungoogled/fingerprint_tables/generate.py"
+    if [ -f "${_gen}" ]; then
+        echo "Regenerating fingerprint tables (.inc) from JSON"
+        python3 "${_gen}"
+    fi
+}
+
 write_gn_args() {
     mkdir -p "${_out_dir}"
 

@@ -11,11 +11,12 @@ fi
 setup_paths
 
 # clean out/ directory before build
-rm -rf "${_src_dir}/out" || true
+#rm -rf "${_src_dir}/out" || true
 
 fetch_sources "$clone"
 apply_patches
 apply_domsub
+generate_fingerprint_tables
 write_gn_args
 fix_tool_downloading
 setup_toolchain
