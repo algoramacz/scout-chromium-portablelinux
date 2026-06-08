@@ -80,26 +80,6 @@ apply_domsub() {
     fi
 }
 
-# Sync the editable fingerprint combination tables into the patched tree and
-# regenerate the .inc files the C++ #includes. The repo-root fingerprint_tables/
-# *.json are the LIVE, tracked, editable source of truth: edit one (e.g. add a
-# freshly-released Chrome version to chrome_versions.json) and the next build
-# picks it up -- no re-patching. They are copied over the in-tree default that
-# patch 033 ships (so a patch-only build still works), then generate.py rewrites
-# the .inc (write-if-changed, so untouched tables don't force a recompile).
-generate_fingerprint_tables() {
-    local _src_tables="${_root}/fingerprint_tables"
-    local _dst_tables="${_src_dir}/components/ungoogled/fingerprint_tables"
-    if [ -d "${_src_tables}" ] && [ -d "${_dst_tables}" ]; then
-        cp "${_src_tables}"/*.json "${_dst_tables}/" 2>/dev/null || true
-        [ -f "${_src_tables}/generate.py" ] && cp "${_src_tables}/generate.py" "${_dst_tables}/"
-    fi
-    if [ -f "${_dst_tables}/generate.py" ]; then
-        echo "Regenerating fingerprint tables (.inc) from JSON"
-        python3 "${_dst_tables}/generate.py"
-    fi
-}
-
 write_gn_args() {
     mkdir -p "${_out_dir}"
 
